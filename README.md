@@ -1,134 +1,54 @@
-# Gin-s-Candy
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ultraman Ginga - Candy Time</title>
+  <title>Gin's Candy</title>
+
+  <!-- PIXEL FONT dari Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
     body {
-      background: linear-gradient(to top, #87CEFA, #ffffff);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      flex-direction: column;
+      background-color: #fff0f5;
+      text-align: center;
+      font-family: 'Press Start 2P', cursive;
+      padding: 20px;
     }
 
-    #ginga {
+    button {
       position: absolute;
-      bottom: 0;
-      opacity: 0;
-      transform: scale(0.5);
-      animation: showUp 2s ease-out forwards;
-      animation-delay: 1s;
-    }
-
-    @keyframes showUp {
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    #hand {
-      position: absolute;
-      bottom: 200px;
-      left: 50%;
-      transform: translateX(-50%) scale(0);
-      opacity: 0;
-      animation: handExtend 2s ease-out forwards;
-      animation-delay: 3s;
-    }
-
-    @keyframes handExtend {
-      to {
-        transform: translateX(-50%) scale(1);
-        opacity: 1;
-      }
-    }
-
-    #text {
-      position: absolute;
-      bottom: 50px;
-      font-size: 2em;
-      color: #ff1493;
-      opacity: 0;
-      animation: textPop 1s ease-out forwards;
-      animation-delay: 5s;
-    }
-
-    @keyframes textPop {
-      to {
-        opacity: 1;
-        transform: scale(1.1);
-      }
-    }
-
-    .button-group {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      display: flex;
-      gap: 10px;
-    }
-
-    .btn {
-      padding: 10px 15px;
-      border: none;
-      border-radius: 8px;
-      background-color: #ff1493;
+      top: 10px;
+      right: 10px;
+      background-color: hotpink;
       color: white;
-      font-weight: bold;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-size: 10px;
       cursor: pointer;
-      transition: background 0.3s;
     }
 
-    .btn:hover {
-      background-color: #ff69b4;
+    img {
+      margin: 10px;
     }
 
-    .candy {
-      position: absolute;
-      width: 80px;
-      animation: dropCandy 1s ease-out;
-    }
-
-    @keyframes dropCandy {
-      from { transform: translateY(-100px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+    p {
+      color: hotpink;
+      font-size: 16px;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
-  <div class="button-group">
-    <button class="btn" onclick="addCandy()">Tambah Permen</button>
-    <button class="btn" onclick="alert('Mode malam coming soon~')">Mode Malam</button>
-    <button class="btn" onclick="location.reload()">Ulang Animasi</button>
-  </div>
 
-  <img id="ginga" src="image-removebg-preview.png" alt="Ultraman Ginga" width="300">
-  <img id="hand" src="image-removebg-preview (2).png" alt="Ultraman hand with candy" width="200">
-  <div id="text">It's ur candy, babe!!</div>
+  <button>Tambah Permen</button>
 
-  <script>
-    function addCandy() {
-      const candy = document.createElement('img');
-      candy.src = 'image-removebg-preview (3)';
-      candy.className = 'candy';
-      candy.style.left = Math.random() * (window.innerWidth - 100) + 'px';
-      candy.style.top = Math.random() * (window.innerHeight - 200) + 'px';
-      document.body.appendChild(candy);
-    }
-  </script>
+  <img src="image-removebg-preview (2).png" alt="Ultraman hand with candy" width="200">
+  <img src="image-removebg-preview (3).png" alt="Candy" width="200">
+
+  <p>It's ur candy, babe!!</p>
+
+  <img src="image-removebg-preview.png" alt="Ultraman Ginga" width="300">
+
 </body>
 </html>
