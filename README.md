@@ -116,14 +116,14 @@
     <button class="btn" onclick="location.reload()">Ulang Animasi</button>
   </div>
 
-  <img id="ginga" src="Ginga.png" alt="Ultraman Ginga" width="300">
-  <img id="hand" src="Hand.png" alt="Ultraman hand with candy" width="200">
+  <img id="ginga" src="image-removebg-preview.png" alt="Ultraman Ginga" width="300">
+  <img id="hand" src="image-removebg-preview (2).png" alt="Ultraman hand with candy" width="200">
   <div id="text">It's ur candy, babe!!</div>
 
   <script>
     function addCandy() {
       const candy = document.createElement('img');
-      candy.src = 'Candy.png'; // dipersingkat untuk placeholder
+      candy.src = 'image-removebg-preview (3)';
       candy.className = 'candy';
       candy.style.left = Math.random() * (window.innerWidth - 100) + 'px';
       candy.style.top = Math.random() * (window.innerHeight - 200) + 'px';
